@@ -1,0 +1,26 @@
+# Nishit Grover (Extra Credit)
+
+# This is the deployment file for the python container. 
+# It is a simple deployment file that creates a deployment with 2 replicas of the python container. 
+# The container sleeps for time 't' which is set to 3600 seconds after running the script.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grovernt-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: grovernt-app
+  template:
+    metadata:
+      labels:
+        app: grovernt-app
+    spec:
+      containers:
+      - name: grovernt-container
+        image: grover2003/grovernt-container:latest
+        command: ["/bin/sh", "-c", "python /home/data/scripts.py && sleep 3600"]
+
+        

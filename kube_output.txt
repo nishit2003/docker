@@ -1,0 +1,3 @@
+NAME                                   READY   STATUS    RESTARTS   AGE
+grovernt-deployment-6c67684896-26jkh   1/1     Running   0          2m9s
+grovernt-deployment-6c67684896-wtl2h   1/1     Running   0          2m6s
